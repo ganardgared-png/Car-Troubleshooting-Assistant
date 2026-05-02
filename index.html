@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Troubleshooting Assistant - Privacy Policy & Terms</title>
+    <meta name="description" content="Privacy Policy and Terms of Service for the Car Troubleshooting Assistant mobile application.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: #111827;
+            --primary-color: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.4);
+            --accent-color: #f59e0b;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo svg {
+            color: var(--primary-color);
+            filter: drop-shadow(0 0 8px var(--primary-glow));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 6rem;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--primary-glow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--primary-glow);
+        }
+
+        /* Content Sections */
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            color: var(--text-main);
+            display: inline-block;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 40px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--surface-color);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 1rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #080b13;
+            padding: 4rem 0 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* simple mobile handling */
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-content">
+        <a href="#home" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                <circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>
+            </svg>
+            Car Troubleshooting
+        </a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <section id="home" class="hero">
+        <h1>Your Ultimate Car Diagnostics Companion</h1>
+        <p>Welcome to the official website for Car Troubleshooting Assistant. Access our Privacy Policy, Terms of Service, and discover how we help you navigate complex car issues easily.</p>
+        <a href="#about" class="btn-primary">Learn More About the App</a>
+    </section>
+
+    <section id="about">
+        <h2>About The App</h2>
+        <p>Car Troubleshooting Assistant is a powerful mobile application designed to help mechanics and car owners instantly decode, understand, and fix automotive trouble codes efficiently. Built with modern cross-platform technology, it offers a seamless experience across all your devices.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <h3>Trouble Code Search</h3>
+                <p>Instantly search and decode thousands of OBD2 codes to identify exact vehicle issues with detailed, easy-to-understand explanations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <h3>Interactive Schematics</h3>
+                <p>Access high-quality wiring diagrams and schematics directly on your device to trace electrical issues accurately.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h3>Free Access</h3>
+                <p>Enjoy our extensive database for free. The app is supported by minimally intrusive advertisements for your convenience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Secure Authentication</h3>
+                <p>Keep your diagnostic history and preferences safely backed up using secure, industry-standard sign-in mechanisms.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy">
+        <h2>Privacy Policy</h2>
+        <p>Last updated: May 2, 2026</p>
+
+        <h3>1. Introduction</h3>
+        <p>Car Troubleshooting Assistant ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+
+        <h3>2. Information We Collect</h3>
+        <p>We may collect the following types of information:</p>
+        <ul>
+            <li><strong>Personal Information:</strong> When you sign in (e.g., via Google), we may collect your name, email address, and profile picture.</li>
+            <li><strong>Diagnostic Data:</strong> Information about your searches, trouble codes accessed, and vehicles saved within the app.</li>
+            <li><strong>Device Information:</strong> Information about your device, including device type, operating system, unique device identifiers, and mobile network information.</li>
+            <li><strong>Usage Data:</strong> Information about how you use the app, such as features accessed, time spent, and user interactions.</li>
+        </ul>
+
+        <h3>3. How We Use Your Information</h3>
+        <p>We use the collected information for the following purposes:</p>
+        <ul>
+            <li>To provide and maintain our car diagnostic services</li>
+            <li>To personalize your experience and improve the app</li>
+            <li>To process authentication and secure your account</li>
+            <li>To enable history backup and synchronization features</li>
+            <li>To display personalized advertisements through Google AdMob</li>
+            <li>To analyze usage patterns and improve our services</li>
+            <li>To comply with legal obligations</li>
+        </ul>
+
+        <h3>4. Information Sharing and Disclosure</h3>
+        <p>We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
+        <ul>
+            <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our app (e.g., Google for authentication and cloud storage).</li>
+            <li><strong>Advertising Partners:</strong> We use Google AdMob to display ads. AdMob may collect and use information for ad personalization based on your consent.</li>
+            <li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect our rights and safety.</li>
+        </ul>
+
+        <h3>5. Data Security</h3>
+        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+
+        <h3>6. Your Rights and Choices</h3>
+        <p>You have rights regarding your personal information, including the right to access, correct, or delete your data, and the ability to opt-out of personalized advertising. Contact us to exercise these rights.</p>
+    </section>
+
+    <section id="terms">
+        <h2>Terms of Service</h2>
+        <p>Last updated: May 2, 2026</p>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>By downloading, installing, or using Car Troubleshooting Assistant ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+
+        <h3>2. Description of Service</h3>
+        <p>Car Troubleshooting Assistant is a mobile application that allows users to search, decode, and understand automotive trouble codes, and view technical schematics. The App provides reference material intended to aid in vehicle diagnostics.</p>
+
+        <h3>3. Professional Advice Disclaimer</h3>
+        <p>The information provided by the App is for reference and educational purposes only. It is not intended to replace professional mechanical advice, diagnosis, or repair. Always consult a certified mechanic before performing any major repairs on your vehicle. We are not liable for any damage caused to your vehicle resulting from the use of information provided by this App.</p>
+
+        <h3>4. User Responsibilities</h3>
+        <p>You agree to use the App only for lawful purposes, not to attempt to reverse engineer the App or its database, and to respect the intellectual property rights of the App and its content.</p>
+
+        <h3>5. Intellectual Property</h3>
+        <p>The App, its original content (including schematics, code descriptions, and database structures), features, and functionality are owned by Car Troubleshooting Assistant and are protected by intellectual property laws.</p>
+
+        <h3>6. Disclaimers and Limitation of Liability</h3>
+        <p>The App is provided "as is" without warranties of any kind. In no event shall Car Troubleshooting Assistant be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the App, including any physical damage to vehicles or personal injury.</p>
+
+        <h3>7. Changes to Terms</h3>
+        <p>We reserve the right to modify these Terms at any time. Continued use of the App after changes constitutes acceptance of the new Terms.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions about our Privacy Policy, Terms of Service, or the Car Troubleshooting Assistant app, please feel free to contact us.</p>
+        
+        <div class="contact-card">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <br>
+            <a href="mailto:ganardgared@gmail.com" class="contact-link">ganardgared@gmail.com</a>
+            <p style="margin-top: 1rem; margin-bottom: 0;">We aim to respond to all inquiries within 48 hours.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                <circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>
+            </svg>
+            Car Troubleshooting Assistant
+        </div>
+        <p>&copy; 2026 Car Troubleshooting Assistant. All rights reserved.</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem;">This website is hosted on GitHub Pages for transparency and accessibility.</p>
+    </div>
+</footer>
+
+</body>
+</html>
