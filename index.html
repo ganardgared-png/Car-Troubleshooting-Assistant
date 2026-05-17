@@ -117,10 +117,41 @@
 
         /* Hero Section */
         .hero {
-            padding: 10rem 0 6rem;
-            text-align: center;
+            min-height: 100vh;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            padding: 8rem max(2rem, 6%) 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
             position: relative;
-            background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+            background-color: var(--bg-color);
+            background-image: 
+                linear-gradient(to right, rgba(11, 15, 25, 0.95) 0%, rgba(11, 15, 25, 0.7) 40%, rgba(11, 15, 25, 0.1) 85%),
+                url('hero-bg.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 580px;
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: calc(100vh - 12rem);
         }
 
         .hero h1 {
@@ -131,13 +162,26 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.02em;
+            text-align: left;
         }
 
         .hero p {
             font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 650px;
-            margin: 0 auto 2.5rem;
+            max-width: 100%;
+            margin: 0 0 2.5rem;
+        }
+
+        .hero-buttons {
+            position: absolute;
+            left: 50%;
+            bottom: 3rem;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: auto;
         }
 
         .btn-primary {
@@ -325,15 +369,38 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .nav-links {
                 display: none; /* simple mobile handling */
             }
+            .hero {
+                align-items: center;
+                text-align: center;
+                padding: 8rem 2rem 4rem;
+                background-image:
+                    linear-gradient(to bottom, rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.9)),
+                    url('hero-bg.png');
+                background-position: center center;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
+                text-align: center;
             }
-            .hero {
-                padding: 8rem 0 4rem;
+            
+            .hero p {
+                margin: 0 auto 2.5rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
             }
             section {
                 padding: 3rem 0;
@@ -367,9 +434,14 @@
 
 <main class="container">
     <section id="home" class="hero">
-        <h1>Your Ultimate Car Diagnostics Companion</h1>
-        <p>Welcome to the official website for Car Troubleshooting Assistant. Access our Privacy Policy, Terms of Service, and discover how we help you navigate complex car issues easily.</p>
-        <a href="#about" class="btn-primary">Learn More About the App</a>
+        <div class="hero-content">
+            <h1>Your Ultimate Car Diagnostics Companion</h1>
+            <p>Welcome to the official website for Car Troubleshooting Assistant. Access our Privacy Policy, Terms of Service, and discover how we help you navigate complex car issues easily.</p>
+        </div>
+        <div class="hero-buttons">
+            <a href="#about" class="btn-primary">Learn More About the App</a>
+            <a href="https://lemon-manuals.la/" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); border-color: rgba(245, 158, 11, 0.2);">More Troubleshooting</a>
+        </div>
     </section>
 
     <section id="about">
